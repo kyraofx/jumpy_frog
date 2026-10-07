@@ -2,6 +2,10 @@
 
 Jumpy Frog is a beginner-friendly browser game in which a bright green frog swims through moving underwater kelp. It uses a single HTML canvas and has no dependencies, image assets, or build step.
 
+## Live Demo
+
+[Play Jumpy Frog](https://kyraofx.github.io/jumpy_frog/)
+
 ## Features
 
 - Simple start, playing, and game-over states
@@ -58,13 +62,19 @@ The game loop runs once per animation frame. While the game is active, it update
 
 No build step or package installation is required.
 
-1. Open the project folder:
+1. Clone the repository:
 
    ```bash
-   cd ~/Desktop/ai_projs/jumpy_frog
+   git clone https://github.com/kyraofx/jumpy_frog.git
    ```
 
-2. Open `index.html` in a modern browser. On macOS, you can run:
+2. Open the project folder:
+
+   ```bash
+   cd jumpy_frog
+   ```
+
+3. Open `index.html` in a modern browser. On macOS, you can run:
 
    ```bash
    open index.html
