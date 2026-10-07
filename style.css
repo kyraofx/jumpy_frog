@@ -1,0 +1,86 @@
+/* A small reset removes browser spacing differences and makes sizing predictable. */
+* {
+  box-sizing: border-box;
+}
+
+/* The page background frames the game with a calm deep-ocean gradient. */
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #eaffff;
+  background:
+    radial-gradient(circle at top, rgba(61, 214, 211, 0.35), transparent 42%),
+    linear-gradient(160deg, #073b5c, #031d35 72%);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+/* The centered shell keeps the heading, canvas, and controls visually connected. */
+.game-shell {
+  width: min(100%, 960px);
+  text-align: center;
+}
+
+.game-header {
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: #76f3de;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1;
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.18);
+}
+
+.game-header p:last-child {
+  margin: 10px 0 0;
+  color: #c9f6f2;
+}
+
+/* The canvas keeps its drawing resolution while scaling down on small screens. */
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 5px solid rgba(207, 255, 246, 0.8);
+  border-radius: 24px;
+  background: #0f91b4;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 2px rgba(0, 84, 104, 0.2);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+#gameCanvas:focus-visible {
+  outline: 4px solid #ffe58a;
+  outline-offset: 5px;
+}
+
+/* The control hint stays understated because instructions also appear in the game. */
+.controls {
+  margin: 14px 0 0;
+  color: #bdece9;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 14px;
+  }
+
+  .game-header p:last-child {
+    font-size: 0.9rem;
+  }
+}

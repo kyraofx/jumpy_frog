@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic page information helps browsers render the game consistently. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jumpy Frog is a simple canvas game about swimming through underwater kelp."
+    />
+    <title>Jumpy Frog</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- The page shell gives the canvas a title and a short, always-visible control hint. -->
+    <main class="game-shell">
+      <header class="game-header">
+        <p class="eyebrow">Underwater Arcade</p>
+        <h1>Jumpy Frog</h1>
+        <p>Swim through the kelp without touching the reef.</p>
+      </header>
+
+      <!-- JavaScript draws every game graphic directly inside this canvas. -->
+      <canvas
+        id="gameCanvas"
+        width="900"
+        height="600"
+        tabindex="0"
+        aria-label="Jumpy Frog game. Press Space, click, or tap to swim upward."
+      >
+        Your browser does not support the HTML canvas element.
+      </canvas>
+
+      <p class="controls"><strong>Controls:</strong> Space, click, or tap</p>
+    </main>
+
+    <!-- The game logic loads after the canvas so it can safely access the element. -->
+    <script src="script.js"></script>
+  </body>
+</html>
